@@ -26,4 +26,4 @@ if (navigator.appVersion.indexOf("Mac") != -1) {
 }
 
 OSbu.innerHTML = `<a href="https://www.aliflang.org/alifstudio/${OSlink}" target="_blank">
-<i class="fa fa-${OSicon}"></i> تحميل لنضام <span id="os"> ${OSName} </span></a>`;
+<i class="fab fa-${OSicon}"></i> تحميل لنضام <span id="os"> ${OSName} </span></a>`;
