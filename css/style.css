@@ -89,6 +89,7 @@ button {
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
+  margin: 5px;
 }
 
 header {
@@ -223,6 +224,10 @@ section#tap3 #row .right #about p {
   font-size: 1.3em;
   margin-top: 3px;
   margin-bottom: 3px;
+}
+
+section#tap3 #row .right #download a {
+  color: #fff;
 }
 
 section#tap3 #row > * {

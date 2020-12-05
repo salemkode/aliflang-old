@@ -105,6 +105,11 @@ section#tap3 {
           margin-bottom: 3px;
         }
       }
+      #download{
+        a{
+          color: $tap1-color;
+        }
+      }
     }
     display: flex;
     text-align: center;
