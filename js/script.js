@@ -1,7 +1,7 @@
 //hermes
 let req = new XMLHttpRequest();
 let names = null;
-req.open("GET", "../data/json.json");
+req.open("GET", "data/json.json");
 req.onload = () => {
   names = JSON.parse(req.responseText);
   names = names.header;
