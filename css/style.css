@@ -83,7 +83,7 @@ hr {
 }
 
 button {
-  background-color: DodgerBlue;
+  background-color: #1c7c54;
   border: none;
   color: white;
   padding: 12px 30px;
@@ -93,17 +93,18 @@ button {
 }
 
 svg {
-  margin: -10px 0;
+  display: block;
+  margin: -2px 0;
 }
 
 svg path {
-  fill: #26de81;
-  margin: -1px 0;
+  margin: -2px 0;
+  fill: #1c7c54;
 }
 
 .card {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: 5px;
@@ -114,12 +115,11 @@ svg path {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: solid black 0.1px;
 }
 
 header {
   min-height: 50%;
-  background: #26de81 !important;
+  background: #1c7c54 !important;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,34 +181,49 @@ header div p {
 }
 
 section#tap1 {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*> div {
+    text-align: center;
+    margin: 5px;
+    width: 50%;
+    border-radius: 30px;
+    padding-bottom: 5px;
+    background: $sec-color;
+    color: $firt-color;
+    overflow: hidden;
+    img {
+      width: 110%;
+    }
+    a {
+      color: #3c6185;
+    }
+    a:hover {
+      border-bottom: solid 1px white;
+      transition-duration: 0.5s;
+    }
+  }*/
 }
 
-section#tap1 > div {
-  text-align: center;
-  margin: 5px;
-  width: 50%;
-  border-radius: 30px;
-  padding-bottom: 5px;
-  background: #26de81;
-  color: #fff;
-  overflow: hidden;
+section#tap1 .card {
+  width: 80%;
+  margin: auto;
+  background-color: #1c7c54;
+  color: white;
+  padding: 15px;
 }
 
-section#tap1 > div img {
-  width: 110%;
+section#tap1 .card a {
+  color: wheat;
 }
 
-section#tap1 > div a {
-  color: #3c6185;
-}
-
-section#tap1 > div a:hover {
-  border-bottom: solid 1px white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+section#tap1 .card a:hover {
+  color: black;
+  background-color: white;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 section#tap2 {
@@ -244,7 +259,7 @@ section#tap3 #row .right #download a {
 }
 
 section#tap3 #row .right #download button {
-  background-color: #26de81;
+  background-color: #1c7c54;
 }
 
 section#tap3 #row .right #download button a {
@@ -264,7 +279,10 @@ section#tap3 #row img {
 section#tap4 {
   text-align: center;
   margin-bottom: 10px;
-  i: in;
+}
+
+section#tap4 h1 {
+  margin: 10px auto;
 }
 
 section#tap4 #cards4 {
@@ -278,6 +296,16 @@ section#tap4 #cards4 > * {
   margin: 0 auto;
 }
 
+section#tap4 #cards4 > * h3 {
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+section#tap4 #cards4 > * p {
+  width: 90%;
+  margin: auto;
+}
+
 section#tap4 #cards4 > * button {
   margin-top: auto;
 }
@@ -285,5 +313,43 @@ section#tap4 #cards4 > * button {
 section#tap4 i {
   margin: 5px;
   font-size: 4em;
+}
+
+section#tap5 {
+  text-align: center;
+  background-color: #1c7c54;
+  padding-bottom: 20px;
+}
+
+section#tap5 #tap5-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#tap5 #tap5-holder .card {
+  width: 30%;
+  height: auto;
+  margin: 2px auto;
+  padding: 10px;
+  background-color: none;
+  border: 0.5px white solid;
+  color: white;
+}
+
+section#tap5 #tap5-holder .card h1 {
+  margin: 10px auto;
+}
+
+section#tap5 #tap5-holder .card i {
+  background-color: #73E2A7;
+  color: #1B512D;
+  padding: 5px 0;
+  border-radius: 30px 0 30px 0;
+}
+
+section#tap5 #tap5-holder .card p {
+  font-size: 1.5em;
+  line-height: 2em;
 }
 /*# sourceMappingURL=style.css.map */

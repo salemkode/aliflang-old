@@ -17,7 +17,7 @@ hr {
   margin: 3em auto;
 }
 button{
-  background-color: DodgerBlue;
+  background-color: $sec-color;
   border: none;
   color: white;
   padding: 12px 30px;
@@ -27,18 +27,18 @@ button{
 }
 
 svg {
-  margin: -10px 0;
+  display: block;
+  margin: -2px 0;
   path {
-    fill: $header-bkcolor;
-    margin: -1px 0;
+    margin: -2px 0;
+    fill: $sec-color;
   }
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  border: solid black 0.1px;
 }

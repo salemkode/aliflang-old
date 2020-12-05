@@ -1,12 +1,11 @@
 header {
   min-height: 50%;
-  //background: url(../res/alifstudio_background_green.png) fixed;
-  background: $header-bkcolor !important;
-  color: $header-color;
+  background: $sec-color !important;
+  color: $firt-color;
   display: flex;
   flex-direction: column;
   a {
-    color: $header-color;
+    color: $firt-color;
   }
 
   > * {
@@ -46,15 +45,31 @@ header {
 }
 
 section#tap1 {
+  text-align: center;
   display: flex;
-  > div {
+  .card {
+    width: 80%;
+    margin: auto;
+    background-color: $sec-color;
+    color: white;
+    padding: 15px;
+    a {
+      color: wheat;
+    }
+    a:hover {
+      color: black;
+      background-color: white;
+      transition-delay: 1s;
+    }
+  }
+  /*> div {
     text-align: center;
     margin: 5px;
     width: 50%;
     border-radius: 30px;
     padding-bottom: 5px;
-    background: $tap1-bkcolor;
-    color: $tap1-color;
+    background: $sec-color;
+    color: $firt-color;
     overflow: hidden;
     img {
       width: 110%;
@@ -66,7 +81,7 @@ section#tap1 {
       border-bottom: solid 1px white;
       transition-duration: 0.5s;
     }
-  }
+  }*/
 }
 
 section#tap2 {
@@ -97,9 +112,9 @@ section#tap3 {
           color: rgb(0, 60, 255);
         }
         button {
-          background-color: $header-bkcolor;
+          background-color: $sec-color;
           a {
-            color: $tap1-color;
+            color: $firt-color;
           }
         }
       }
@@ -121,12 +136,23 @@ section#tap3 {
 section#tap4 {
   text-align: center;
   margin-bottom: 10px;
-
+  h1 {
+    margin: 10px auto;
+  }
   #cards4 {
     display: flex;
+
     > * {
       width: 30%;
       margin: 0 auto;
+      h3 {
+        font-weight: bold;
+        margin: 10px auto;
+      }
+      p {
+        width: 90%;
+        margin: auto;
+      }
       button {
         margin-top: auto;
       }
@@ -137,5 +163,36 @@ section#tap4 {
     margin: 5px;
     font-size: 4em;
   }
-  i:
+}
+
+section#tap5 {
+  text-align: center;
+  background-color: $sec-color;
+  padding-bottom: 20px;
+
+  #tap5-holder {
+    display: flex;
+    .card {
+      width: 30%;
+      height: auto;
+      margin: 2px auto;
+      padding: 10px;
+      background-color: none;
+      border: 0.5px white solid;
+      color: white;
+      h1 {
+        margin: 10px auto;
+      }
+      i {
+        background-color: $c3-color;
+        color: $sce-color;
+        padding: 5px 0;
+        border-radius: 30px 0 30px 0;
+      }
+      p {
+        font-size: 1.5em;
+        line-height: 2em;
+      }
+    }
+  }
 }

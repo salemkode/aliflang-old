@@ -1,11 +1,11 @@
 function e(e, t, n) {
     void 0 === n && (n = {}),
       (this.options = {
-        write_speed: 250,
+        write_speed: 150,
         write_acceleration: 1,
         write_random: 0.2,
         write_pause: 3e3,
-        clear_speed: 62.5,
+        clear_speed: 50,
         clear_acceleration: 1,
         clear_random: 0.2,
         clear_pause: 500,
