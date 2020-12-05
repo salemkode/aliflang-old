@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 200%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.5;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/*
+blockquote,
+q {
+  quotes: none;
+}*/
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+.par {
+  line-height: 20px;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px #dbdbdb;
+  max-width: 90%;
+  margin: 3em auto;
+}
+
+button {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+header {
+  min-height: 50%;
+  background: #26de81 !important;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header a {
+  color: #fff;
+}
+
+header > * {
+  padding: 1%;
+}
+
+header nav {
+  padding: 0 30px;
+  margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+header nav ul li {
+  margin: auto 5px;
+}
+
+header nav ul li a:hover {
+  border-bottom: solid 1px blue;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+header div {
+  margin: auto;
+  text-align: center;
+}
+
+header div .active {
+  border-left: white 2px solid;
+}
+
+header div p {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+svg {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+  margin: -1px 0;
+  margin-top: -10px;
+}
+
+svg path {
+  fill: #26de81;
+  margin: -1px 0;
+}
+
+section#tap1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#tap1 > div {
+  text-align: center;
+  margin: 5px;
+  width: 50%;
+  border-radius: 30px;
+  padding-bottom: 5px;
+  background: #26de81;
+  color: #fff;
+  overflow: hidden;
+}
+
+section#tap1 > div img {
+  width: 110%;
+}
+
+section#tap1 > div a {
+  color: #3c6185;
+}
+
+section#tap1 > div a:hover {
+  border-bottom: solid 1px white;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+section#tap2 {
+  text-align: center;
+}
+
+section#tap2 blockquote {
+  margin: 0 auto;
+  max-width: 90%;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+section#tap3 h1 {
+  text-align: center;
+}
+
+section#tap3 #row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+section#tap3 #row .right #about p {
+  font-size: 1.3em;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+section#tap3 #row > * {
+  width: 50%;
+  margin: auto;
+}
+
+section#tap3 #row img {
+  width: 40%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

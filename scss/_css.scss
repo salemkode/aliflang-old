@@ -1,0 +1,122 @@
+$header-color: #fff;
+$header-bkcolor: #26de81;
+$tap1-color: #fff;
+$tap1-bkcolor: $header-bkcolor;
+header {
+  min-height: 50%;
+  //background: url(../res/alifstudio_background_green.png) fixed;
+  background: $header-bkcolor !important;
+  color: $header-color;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: $header-color;
+  }
+
+  > * {
+    padding: 1%;
+  }
+
+  nav {
+    padding: 0 30px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      height: 100%;
+
+      li {
+        margin: auto 5px;
+
+        a:hover {
+          border-bottom: solid 1px blue;
+          transition-duration: 0.5s;
+        }
+      }
+    }
+  }
+  div {
+    margin: auto;
+    text-align: center;
+    .active {
+      border-left: white 2px solid;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+  }
+}
+svg {
+  transform: scale(-1);
+  margin: -1px 0;
+  margin-top: -10px;
+  path {
+    fill: $header-bkcolor;
+    margin: -1px 0;
+  }
+}
+
+section#tap1 {
+  display: flex;
+  > div {
+    text-align: center;
+    margin: 5px;
+    width: 50%;
+    border-radius: 30px;
+    padding-bottom: 5px;
+    background: $tap1-bkcolor;
+    color: $tap1-color;
+    overflow: hidden;
+    img {
+      width: 110%;
+    }
+    a {
+      color: #3c6185;
+    }
+    a:hover {
+      border-bottom: solid 1px white;
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+section#tap2 {
+  text-align: center;
+  blockquote {
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 1.5em;
+    font-style: italic;
+  }
+}
+
+section#tap3 {
+  h1{
+    text-align: center;
+  }
+  #row {
+    .right{
+      #about{
+        p{
+          font-size: 1.3em;
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+    display: flex;
+    text-align: center;
+
+    > * {
+      width: 50%;
+      margin: auto;
+    }
+    img {
+      width: 40%;
+      height: 100%;
+    }
+  }
+
+}
