@@ -1,0 +1,78 @@
+@media (max-width: 1061px) {
+  body > header {
+    min-height: 35%;
+    nav {
+      > * {
+        margin: auto;
+      }
+      margin: auto;
+    }
+    div p {
+      font-size: 1.8em;
+    }
+  }
+  section#tap1 {
+    flex-direction: column-reverse;
+    .card {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+  section#tap3 #row {
+    flex-direction: column-reverse;
+    > * {
+      width: 98%;
+    }
+  }
+  section#tap4 #cards4 {
+    flex-direction: column;
+
+    > * {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 90%;
+    }
+  }
+
+  section#tap5 #tap5-holder {
+    flex-direction: column;
+    .card {
+      width: 98%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  section#tap6 #more-about article {
+    width: 99%;
+  }
+}
+@media (max-width: 610px) {
+  body > header {
+    h1 {
+      font-size: 2em;
+      display: flex;
+    }
+    > div {
+      width: 100%;
+    }
+
+    div p {
+      font-size: 1.1em;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+  #tap-m ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: calc(50% - 10px);
+      text-align: center;
+      a {
+        color: white;
+      }
+    }
+  }
+}

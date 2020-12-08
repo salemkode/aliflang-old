@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../res/font/Cairo-SemiBold.ttf) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +17,15 @@
   text-decoration: none;
   font-family: 'Cairo', sans-serif;
   line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -61,14 +72,17 @@ table {
 
 h1 {
   font-size: 2.5em;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 1.3em;
+  font-weight: bold;
 }
 
 .par {
@@ -82,7 +96,7 @@ hr {
   margin: 3em auto;
 }
 
-button {
+.bu {
   background-color: #1c7c54;
   border: none;
   color: white;
@@ -117,9 +131,9 @@ svg path {
           flex-direction: column;
 }
 
-header {
+body > header {
   min-height: 50%;
-  background: #1c7c54 !important;
+  background: #1c7c54;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,52 +144,58 @@ header {
           flex-direction: column;
 }
 
-header a {
+body > header a {
   color: #fff;
 }
 
-header > * {
+body > header > * {
   padding: 1%;
 }
 
-header nav {
+body > header nav {
+  font-size: 1.2em;
   padding: 0 30px;
   margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-header nav ul {
+body > header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
-header nav ul li {
+body > header nav ul li {
   margin: auto 5px;
 }
 
-header nav ul li a:hover {
-  border-bottom: solid 1px blue;
+body > header nav ul li a {
+  padding: 10px;
+}
+
+body > header nav ul li a:hover {
+  border-bottom: solid 1px #73e2a7;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-header div {
+body > header div {
   margin: auto;
   text-align: center;
 }
 
-header div .active {
+body > header div .active {
   border-left: white 2px solid;
 }
 
-header div p {
+body > header div p {
   margin-top: 20px;
   font-size: 2em;
 }
@@ -185,26 +205,6 @@ section#tap1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*> div {
-    text-align: center;
-    margin: 5px;
-    width: 50%;
-    border-radius: 30px;
-    padding-bottom: 5px;
-    background: $sec-color;
-    color: $firt-color;
-    overflow: hidden;
-    img {
-      width: 110%;
-    }
-    a {
-      color: #3c6185;
-    }
-    a:hover {
-      border-bottom: solid 1px white;
-      transition-duration: 0.5s;
-    }
-  }*/
 }
 
 section#tap1 .card {
@@ -219,11 +219,21 @@ section#tap1 .card a {
   color: wheat;
 }
 
-section#tap1 .card a:hover {
-  color: black;
-  background-color: white;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+section#tap1 .card p {
+  font-size: 1.3em;
+}
+
+#first-svg {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#first-svg svg {
+  background-color: #1c7c54;
+}
+
+#first-svg svg path {
+  fill: white;
 }
 
 section#tap2 {
@@ -281,6 +291,10 @@ section#tap4 {
   margin-bottom: 10px;
 }
 
+section#tap4 a {
+  color: white;
+}
+
 section#tap4 h1 {
   margin: 10px auto;
 }
@@ -307,7 +321,14 @@ section#tap4 #cards4 > * p {
 }
 
 section#tap4 #cards4 > * button {
+  /*cursor: none;
+        display: flex;*/
   margin-top: auto;
+}
+
+section#tap4 #cards4 > * button a {
+  width: 100%;
+  height: 100%;
 }
 
 section#tap4 i {
@@ -319,6 +340,15 @@ section#tap5 {
   text-align: center;
   background-color: #1c7c54;
   padding-bottom: 20px;
+}
+
+section#tap5 header {
+  padding: 20px;
+}
+
+section#tap5 header * {
+  padding: 2px;
+  color: white;
 }
 
 section#tap5 #tap5-holder {
@@ -342,14 +372,166 @@ section#tap5 #tap5-holder .card h1 {
 }
 
 section#tap5 #tap5-holder .card i {
-  background-color: #73E2A7;
-  color: #1B512D;
+  color: white;
   padding: 5px 0;
-  border-radius: 30px 0 30px 0;
+  border-radius: 50px 0;
 }
 
 section#tap5 #tap5-holder .card p {
   font-size: 1.5em;
   line-height: 2em;
+}
+
+section#tap6 {
+  text-align: center;
+}
+
+section#tap6 a {
+  color: #6e6ed4;
+}
+
+section#tap6 > header h1 {
+  color: #1b512d;
+}
+
+section#tap6 > header p {
+  font-size: 1.3em;
+}
+
+section#tap6 #more-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+
+section#tap6 #more-about article {
+  margin: 10px auto;
+  width: 49%;
+  padding: 10px;
+}
+
+section#tap6 #more-about article header p {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+section#tap6 #more-about article > p {
+  font-size: 1.2em;
+  line-height: 2.2em;
+  background-color: #1c7c54;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+section#tap6 #more-about article > p a {
+  color: wheat;
+}
+
+#tap-m ul {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #1c7c54;
+  color: white;
+}
+
+@media (max-width: 1061px) {
+  body > header {
+    min-height: 35%;
+  }
+  body > header nav {
+    margin: auto;
+  }
+  body > header nav > * {
+    margin: auto;
+  }
+  body > header div p {
+    font-size: 1.8em;
+  }
+  section#tap1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section#tap1 .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+  section#tap3 #row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section#tap3 #row > * {
+    width: 98%;
+  }
+  section#tap4 #cards4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#tap4 #cards4 > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+  }
+  section#tap5 #tap5-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#tap5 #tap5-holder .card {
+    width: 98%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  section#tap6 #more-about article {
+    width: 99%;
+  }
+}
+
+@media (max-width: 610px) {
+  body > header h1 {
+    font-size: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body > header > div {
+    width: 100%;
+  }
+  body > header div p {
+    font-size: 1.1em;
+  }
+  body > header nav {
+    display: none;
+  }
+  #tap-m ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #tap-m ul li {
+    width: calc(50% - 10px);
+    text-align: center;
+  }
+  #tap-m ul li a {
+    color: white;
+  }
 }
 /*# sourceMappingURL=style.css.map */
