@@ -1,7 +1,6 @@
-//hermes
+//استيراد النصوص
 let req = new XMLHttpRequest();
 let names = null;
-
 
 req.open("GET", "data/json.json");
 req.onload = () => {
@@ -12,6 +11,7 @@ req.onload = () => {
 };
 req.send();
 
+/* النص المتغير */
 var OSbu = document.querySelector("#os");
 var OSName = "ويندوز";
 var OSicon = "windows";
@@ -29,4 +29,41 @@ if (navigator.appVersion.indexOf("Mac") != -1) {
 
 OSbu.innerHTML = `<a href="https://www.aliflang.org/alifstudio/${OSlink}" target="_blank">
 <i class="fab fa-${OSicon}"></i> تحميل لنضام <span id="os"> ${OSName} </span></a>`;
+
+/* قتح و اغلاق الريط العلوي
+ */
+var buBar = document.querySelector("#bu-bar");
+var Bar = document.querySelector("#bar");
+
+buBar.addEventListener("click", buB_click);
+
+function buB_click() {
+  if (document.querySelector("#bar").style.display == "flex") {
+    document.querySelector("#bar").style.display = "none";
+  } else {
+    document.querySelector("#bar").style.display = "flex";
+  }
+}
+
+/* ضبط التوافقيه مع شاشات الهواتف*/
+
+function resize() {
+  document.querySelector("#title").style.marginTop = s ;
+  navUl.style.height = "0";
+  navUl.style.height = "auto";
+
+  if(window.innerWidth > 610){
+    document.querySelector("#bar").style.display = "flex";
+  }else{
+    document.querySelector("#bar").style.display = "none";
+
+  }
+}
+let nav = document.querySelector("nav");
+let navUl = document.querySelector("nav ul");
+let s = (nav.offsetHeight ) +"px";
+
+window.addEventListener("resize", resize);
+
+resize();
 

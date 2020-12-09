@@ -21,7 +21,7 @@ hr {
   margin: 3em auto;
 }
 .bu{
-  background-color: $sec-color;
+  background-color: $main-color;
   border: none;
   color: white;
   padding: 12px 30px;
@@ -35,7 +35,7 @@ svg {
   margin: -2px 0;
   path {
     margin: -2px 0;
-    fill: $sec-color;
+    fill: $main-color;
   }
 }
 

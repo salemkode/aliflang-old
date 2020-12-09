@@ -1,12 +1,12 @@
 @media (max-width: 1061px) {
   body > header {
     min-height: 35%;
-    nav {
+    /*nav {
       > * {
         margin: auto;
       }
       margin: auto;
-    }
+    }*/
     div p {
       font-size: 1.8em;
     }
@@ -46,6 +46,7 @@
     width: 99%;
   }
 }
+
 @media (max-width: 610px) {
   body > header {
     h1 {
@@ -61,18 +62,137 @@
     }
 
     nav {
-      display: none;
+      flex-direction: column;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
+      padding: 5px;
+      box-shadow: 0 1px 3px black;
+      h2 {
+        display: flex;
+        width: 100%;
+        text-align: center;
+
+        a {
+          margin: auto;
+        }
+        i {
+          display: inline !important;
+          margin: auto 5px;
+        }
+      }
+      ul {
+        top: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        li {
+          margin: auto;
+          margin-bottom: 15px;
+          width: 45%;
+          border: white 2px solid;
+          transition: 0.3s;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          a {
+            color: white;
+            text-align: center;
+            padding: 5px;
+          }
+        }
+      }
     }
   }
-  #tap-m ul {
-    display: flex;
-    flex-wrap: wrap;
-    li {
-      width: calc(50% - 10px);
-      text-align: center;
-      a {
-        color: white;
+  
+  section#tap2 blockquote {
+    font-size: 1.3em;
+  }
+
+  section#tap3 {
+    h1 {
+      font-size: 2em;
+    }
+
+    #row .right #about p {
+      margin: 5px;
+      font-size: 1em;
+      line-height: 2;
+    }
+  }
+
+  section#tap5 {
+    header {
+      p {
       }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  body > header {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    div p {
+      font-size: 0.8em;
+    }
+
+  }
+
+  section#tap1 .card p {
+    font-size: .89em;
+  }
+  section#tap2 blockquote {
+    font-size: .95em;
+  }
+
+  section#tap3 {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    #row .right #about p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+  }
+
+  section#tap4 h1{
+    font-size: 1.5em;
+  }
+  section#tap5 {
+    header {
+      p {
+        font-size: 19px;
+      }
+    }
+    #tap5-holder .card{
+      i{
+          font-size: 3em;
+      }
+      h1{
+        font-size: 1.2em;
+      }
+      p{
+        font-size: 1em;
+      }
+    }
+  }
+  section#tap6 #more-about article > p{
+    font-size: 1em;
+
+  }
+  footer{
+    h2
+    {
+      font-size: 1em;
     }
   }
 }

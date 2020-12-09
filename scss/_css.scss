@@ -1,9 +1,10 @@
 body > header {
   min-height: 50%;
-  background: $sec-color;
+  background: $main-color;
   color: $firt-color;
   display: flex;
   flex-direction: column;
+  position: relative;
   a {
     color: $firt-color;
   }
@@ -13,12 +14,19 @@ body > header {
   }
 
   nav {
+    transition: all .35s ease-in-out;
+    z-index: 100;
     font-size: 1.2em;
     padding: 0 30px;
     margin-top: 2%;
     display: flex;
-    display: flex;
     justify-content: space-between;
+    background-color: $main-color;
+    h2{
+      i{
+        display: none !important;
+      }
+    }
     ul {
       display: flex;
       height: 100%;
@@ -29,7 +37,7 @@ body > header {
           padding: 10px;
         }
         a:hover {
-          border-bottom: solid 1px $c3-color;
+          border-bottom: solid 1px $link-color;
           transition-duration: 0.5s;
         }
       }
@@ -39,7 +47,7 @@ body > header {
     margin: auto;
     text-align: center;
     .active {
-      border-left: white 2px solid;
+      border-left: $link-color 2px solid;
     }
     p {
       margin-top: 20px;
@@ -54,11 +62,11 @@ section#tap1 {
   .card {
     width: 80%;
     margin: auto;
-    background-color: $sec-color;
+    background-color: $main-color;
     color: white;
     padding: 15px;
     a {
-      color: $c6-color;
+      color: $link-color;
     }
 
     p {
@@ -71,7 +79,7 @@ section#tap1 {
   transform: scaleY(-1);
 
   svg {
-    background-color: $sec-color;
+    background-color: $main-color;
     path {
       fill: white;
     }
@@ -106,7 +114,7 @@ section#tap3 {
           color: rgb(0, 60, 255);
         }
         button {
-          background-color: $sec-color;
+          background-color: $main-color;
           a {
             color: $firt-color;
           }
@@ -170,13 +178,16 @@ section#tap4 {
 
 section#tap5 {
   text-align: center;
-  background-color: $sec-color;
+  background-color: $main-color;
   padding-bottom: 20px;
   header {
     padding: 20px;
     * {
       padding: 2px;
       color: white;
+    }
+    p{
+      font-size: 24px;
     }
   }
 
@@ -239,26 +250,21 @@ section#tap6 {
       > p {
         font-size: 1.2em;
         line-height: 2.2em;
-        background-color: $sec-color;
+        background-color: $main-color;
         color: white;
         border-radius: 10px;
         padding: 10px;
         box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
         a {
-          color: $c6-color;
+          color: $link-color;
         }
       }
     }
   }
 }
 
-#tap-m ul {
-  display: none;
-
-}
-
 footer{
   text-align: center;
-  background-color: $sec-color;
+  background-color: $main-color;
   color: white;
 }

@@ -97,7 +97,7 @@ hr {
 }
 
 .bu {
-  background-color: #1c7c54;
+  background-color: #7158e2;
   border: none;
   color: white;
   padding: 12px 30px;
@@ -113,7 +113,7 @@ svg {
 
 svg path {
   margin: -2px 0;
-  fill: #1c7c54;
+  fill: #7158e2;
 }
 
 .card {
@@ -133,7 +133,7 @@ svg path {
 
 body > header {
   min-height: 50%;
-  background: #1c7c54;
+  background: #7158e2;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +142,7 @@ body > header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 body > header a {
@@ -153,16 +154,23 @@ body > header > * {
 }
 
 body > header nav {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  z-index: 100;
   font-size: 1.2em;
   padding: 0 30px;
   margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #7158e2;
+}
+
+body > header nav h2 i {
+  display: none !important;
 }
 
 body > header nav ul {
@@ -181,7 +189,7 @@ body > header nav ul li a {
 }
 
 body > header nav ul li a:hover {
-  border-bottom: solid 1px #73e2a7;
+  border-bottom: solid 1px #fff200;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
@@ -192,7 +200,7 @@ body > header div {
 }
 
 body > header div .active {
-  border-left: white 2px solid;
+  border-left: #fff200 2px solid;
 }
 
 body > header div p {
@@ -210,13 +218,13 @@ section#tap1 {
 section#tap1 .card {
   width: 80%;
   margin: auto;
-  background-color: #1c7c54;
+  background-color: #7158e2;
   color: white;
   padding: 15px;
 }
 
 section#tap1 .card a {
-  color: wheat;
+  color: #fff200;
 }
 
 section#tap1 .card p {
@@ -229,7 +237,7 @@ section#tap1 .card p {
 }
 
 #first-svg svg {
-  background-color: #1c7c54;
+  background-color: #7158e2;
 }
 
 #first-svg svg path {
@@ -269,7 +277,7 @@ section#tap3 #row .right #download a {
 }
 
 section#tap3 #row .right #download button {
-  background-color: #1c7c54;
+  background-color: #7158e2;
 }
 
 section#tap3 #row .right #download button a {
@@ -338,7 +346,7 @@ section#tap4 i {
 
 section#tap5 {
   text-align: center;
-  background-color: #1c7c54;
+  background-color: #7158e2;
   padding-bottom: 20px;
 }
 
@@ -349,6 +357,10 @@ section#tap5 header {
 section#tap5 header * {
   padding: 2px;
   color: white;
+}
+
+section#tap5 header p {
+  font-size: 24px;
 }
 
 section#tap5 #tap5-holder {
@@ -422,7 +434,7 @@ section#tap6 #more-about article header p {
 section#tap6 #more-about article > p {
   font-size: 1.2em;
   line-height: 2.2em;
-  background-color: #1c7c54;
+  background-color: #7158e2;
   color: white;
   border-radius: 10px;
   padding: 10px;
@@ -431,28 +443,24 @@ section#tap6 #more-about article > p {
 }
 
 section#tap6 #more-about article > p a {
-  color: wheat;
-}
-
-#tap-m ul {
-  display: none;
+  color: #fff200;
 }
 
 footer {
   text-align: center;
-  background-color: #1c7c54;
+  background-color: #7158e2;
   color: white;
 }
 
 @media (max-width: 1061px) {
   body > header {
     min-height: 35%;
-  }
-  body > header nav {
-    margin: auto;
-  }
-  body > header nav > * {
-    margin: auto;
+    /*nav {
+      > * {
+        margin: auto;
+      }
+      margin: auto;
+    }*/
   }
   body > header div p {
     font-size: 1.8em;
@@ -517,21 +525,119 @@ footer {
     font-size: 1.1em;
   }
   body > header nav {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 5px;
+    -webkit-box-shadow: 0 1px 3px black;
+            box-shadow: 0 1px 3px black;
   }
-  #tap-m ul {
+  body > header nav h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    text-align: center;
+  }
+  body > header nav h2 a {
+    margin: auto;
+  }
+  body > header nav h2 i {
+    display: inline !important;
+    margin: auto 5px;
+  }
+  body > header nav ul {
+    top: 0;
+    width: 100%;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #tap-m ul li {
-    width: calc(50% - 10px);
-    text-align: center;
+  body > header nav ul li {
+    margin: auto;
+    margin-bottom: 15px;
+    width: 45%;
+    border: white 2px solid;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #tap-m ul li a {
+  body > header nav ul li a {
     color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  section#tap2 blockquote {
+    font-size: 1.3em;
+  }
+  section#tap3 h1 {
+    font-size: 2em;
+  }
+  section#tap3 #row .right #about p {
+    margin: 5px;
+    font-size: 1em;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 320px) {
+  body > header h1 {
+    font-size: 1.5em;
+  }
+  body > header div p {
+    font-size: 0.8em;
+  }
+  section#tap1 .card p {
+    font-size: .89em;
+  }
+  section#tap2 blockquote {
+    font-size: .95em;
+  }
+  section#tap3 h1 {
+    font-size: 1.5em;
+  }
+  section#tap3 #row .right #about p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  section#tap4 h1 {
+    font-size: 1.5em;
+  }
+  section#tap5 header p {
+    font-size: 19px;
+  }
+  section#tap5 #tap5-holder .card i {
+    font-size: 3em;
+  }
+  section#tap5 #tap5-holder .card h1 {
+    font-size: 1.2em;
+  }
+  section#tap5 #tap5-holder .card p {
+    font-size: 1em;
+  }
+  section#tap6 #more-about article > p {
+    font-size: 1em;
+  }
+  footer h2 {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */
